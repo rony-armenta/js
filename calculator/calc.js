@@ -28,15 +28,18 @@ class calculator {
     // Reset method
     clear(){
         this.result = 0;
-        //return this.result;
+        return this.result;
     }   
 
 }
 // let's test the calculator class
 const mycalc = new calculator();
 console.log("starting calculations");
-console.log("Add 10: " + mycalc.add(10));
-console.log("Substract 4: " + mycalc.subtract(4) + mycalc.clear());
 console.log("Multipy: by 5 " + mycalc.multiply(5))
+console.log("ResultAlone: " + mycalc.result);
+console.log("Add 10: " + mycalc.add(mycalc.multiply(5)));
+
+console.log("Substract 4: " + mycalc.subtract(4) + mycalc.clear());
+
 console.log("Divide " + mycalc.divide(1) + mycalc.clear());
 console.log("Clear results " + mycalc.clear());
