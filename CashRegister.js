@@ -45,17 +45,17 @@ class cashRegister {
         let total = 0;
         let taxes = 0;
         let subtotal = 0;
-        this.shoppingCart.forEach(purshasedItem => {totalPriceAmount += item.price});
-        taxes = totalPriceAmount * 0.16;
-        subtotal = totalPriceAmount + taxes;
+        this.shoppingCart.forEach(purshasedItem => {total += purshasedItem.price});
+        taxes = total * 0.16;
+        subtotal = total - taxes;
         console.log("Sub total = " + subtotal);
         console.log("Taxes = " + taxes);
-        console.log("Total = " + totalPriceAmount);
+        console.log("Total = " + total);
     }
 
 }
 
 const myShops = new cashRegister();
-//myShops.addItemToCart("iPhone");
+myShops.addItemToCart("iPhone");
 myShops.calculateTotal();
 //myShops.removeItemFromCart("SmartTV"); 
